@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Montserrat, Roboto, serif;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #FF7E29;
+}
+
+nav {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 10px #d36720;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+    padding: 0.5rem;
+}
+
+nav ul li {
+    padding: 1.5rem 1.5rem;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+nav a:hover {
+    text-shadow: 2px 2px 5px #FFD2B4;
+}
+
+nav svg {
+    margin: 2rem;
+    color: #FFF;
+}
+
+.about_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 18rem 10rem;
+    background-image: url("/assets/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about_container img { /* TODO: fix when a page is resized, make responsive */
+    border-radius: 2rem;
+}
+
+.content {
+    text-align: left;
+    max-width: 600px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+button {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid #000;
+    border-radius: 2rem;
+    background-color: #FFF;
+    padding: 1rem;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF7E29;
+    color: #FFF;
+    border-color: #FFD2B4;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.stack_line {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5rem;
+    flex-wrap: wrap;
+}
+
+.skill { /* TBC: use transform animation to make it stand out on hover */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #FF7E29;
+    background-color: hsla(24, 100%, 85%, 0.127);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.skill img {
+    width: 30px;
+    height: 30px;
+    margin: 0.1rem;
+}
+
+.project_container { /* TODO: when a mobile, it should be one column */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 5rem 10rem;
+}
+
+.project_box { /* TODO: when hover, make it stand out and highlight border / make shadow / transition /  */
+    border: 1px solid #FF7E29;
+    border-radius: 2rem;
+    max-width: 600px;
+    background-color: hsla(24, 100%, 85%, 0.127); /* TBC: not sure about it as it's totally matches skills */
+    justify-self: center;
+}
+
+.project_box img {
+    object-fit: cover;
+    padding: 1rem;
+}
+
+.project_box h3, 
+.project_box p {
+    margin: 1rem;
+}
+
+.icon {
+    color: #000;
+    margin: 0.5rem 0.2rem;
+}
+
+.icon:hover {
+    color: #FF7E29;
+}
+
+footer {
+    padding: 2rem;
+    border-top: 1px solid #FF7E29;
+    font-size: 0.8rem;
+}
+
+/* if there's a hover somewhere, combine with focus pseudoclass to make it more accessible */
