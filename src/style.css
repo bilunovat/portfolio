@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900');
 
+/*** Page layout **********************************************************************************/
+
+:root {
+    --clr-primary-accent: #FF7E29;
+    --clr-light-accent: #FFD2B4;
+    --clr-dark-accent: #d36720;
+    --clr-background-accent: hsla(24, 100%, 85%, 0.286);
+    --clr-dark-background-accent: hsla(24, 74%, 15%, 0.351);
+    --clr-black: #000;
+    --clr-white: #FFF;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -12,70 +24,18 @@ html {
 
 body {
     font-family: Montserrat, Roboto, serif;
-    text-align: center;
-    color: #000;
-    background-color: #fff;
+    text-align: left;
+    color: var(--clr-black);
+    background-color: var(--clr-white);
     font-size: 1rem;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    background-color: #FF7E29;
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
-nav {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 1px 10px #d36720;
-}
-
-nav ul {
-    list-style: none;
-    text-align: right;
-    padding: 0.5rem;
-}
-
-nav ul li {
-    padding: 1.5rem 1.5rem;
-    display: inline-block;
-    font-size: 1.2rem;
-}
-
-a {
-    text-decoration: none;
-    color: #FFF;
-}
-
-nav a:hover {
-    text-shadow: 2px 2px 5px #FFD2B4;
-}
-
-nav svg {
-    margin: 2rem;
-    color: #FFF;
-}
-
-.about_container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 18rem 10rem;
-    background-image: url("/assets/wave.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.about_container img { /* TODO: fix when a page is resized, make responsive */
-    border-radius: 2rem;
-}
-
-.content {
-    text-align: left;
-    max-width: 600px;
-}
+/*** Base Elements of Main ****************************************/
 
 img {
     width: 150px;
@@ -89,40 +49,57 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    margin: 1rem 0;
+    margin: 0 0 4rem 0;
+    text-align: center;
 }
 
 h3 {
     font-size: 1.5rem;
 }
 
-button {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    border: 2px solid #000;
-    border-radius: 2rem;
-    background-color: #FFF;
-    padding: 1rem;
-    margin: 2rem 0;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #FF7E29;
-    color: #FFF;
-    border-color: #FFD2B4;
-}
-
 p {
     line-height: 1.5;
 }
 
+/*** About section ****************************************/
+
+.about_section {
+    position: sticky;
+    top: 0;
+    background-color: var(--clr-primary-accent);
+    color: var(--clr-white);
+    height: 100vh;
+}
+
+.about_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem;
+}
+
+.portfolio_photo {
+    border-radius: 2rem;
+    border: 5px solid var(--clr-white);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul li {
+    padding: 1rem;
+}
+
 .stack_line {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 5rem;
+    align-content: flex-start;
+    margin-top: 2rem;
     flex-wrap: wrap;
 }
 
@@ -130,11 +107,11 @@ p {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px solid #FF7E29;
-    background-color: hsla(24, 100%, 85%, 0.127);
-    border-radius: 2rem;
-    padding: 1rem;
-    margin: 0.5rem;
+    border: 2px solid var(--clr-white);
+    background-color: var(--clr-background-accent);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
 }
 
 .skill img {
@@ -143,24 +120,56 @@ p {
     margin: 0.1rem;
 }
 
-.project_container { /* TODO: when a mobile, it should be one column */
+/*** Icons Styling ****************************************/
+
+.icons_bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon,
+.theme_switch svg {
+    color: var(--clr-white);
+}
+
+.icon:hover,
+.icon:focus,
+.icon:focus-visible,
+.theme_switch:hover svg,
+.theme_switch:focus svg,
+.theme_switch:focus-visible svg {
+    color: var(--clr-light-accent);
+    cursor: pointer;
+}
+
+.theme_switch {
+    background: none;
+    border: none;
+    padding: 0 1.5rem;
+    color: var(--clr-white);
+}
+
+/*** Project section ****************************************/
+
+.project_container { /* FIX: when resizing a page make one column */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin: 5rem 10rem;
+    margin: 5rem;
 }
 
 .project_box { /* TODO: when hover, make it stand out and highlight border / make shadow / transition /  */
-    border: 1px solid #FF7E29;
     border-radius: 2rem;
     max-width: 600px;
-    background-color: hsla(24, 100%, 85%, 0.127); /* TBC: not sure about it as it's totally matches skills */
-    justify-self: center;
+    background-color: var(--clr-background-accent);
 }
 
 .project_box img {
     object-fit: cover;
     padding: 1rem;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 .project_box h3, 
@@ -168,19 +177,147 @@ p {
     margin: 1rem;
 }
 
-.icon {
-    color: #000;
-    margin: 0.5rem 0.2rem;
+.align_right {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.icon:hover {
-    color: #FF7E29;
+.cv_button {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid var(--clr-black);
+    border-radius: 2rem;
+    background-color: var(--clr-white);
+    padding: 1rem;
+    margin: 1.5rem;
+    cursor: pointer;
 }
 
-footer {
+.cv_button:hover, 
+.cv_button:focus, 
+.cv_button:focus-visible {
+    background-color: var(--clr-primary-accent);
+    color: var(--clr-white);
+    border-color: var(--clr-light-accent);
+} 
+
+/*** Dark Mode layout *******************************************************************************/
+
+.dark_mode {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.dark_mode .about_section {
+    background-color: var(--clr-dark-background-accent);
+    color: var(--clr-white);
+}
+
+/* alternative styling */
+/* .dark_mode h1 { 
+    color: var(--clr-dark-accent);
+} */
+
+.dark_mode .skill {
+    border: 1px solid var(--clr-light-accent);
+    background-color: var(--clr-background-accent);
+}
+
+.dark_mode .project_box {
+    background-color: var(--clr-dark-background-accent);
+}
+
+.dark_mode .icon {
+    color: var(--clr-dark-accent);
+    /* color: var(--clr-white); */ /* alternative styling */
+}
+
+.dark_mode .icon:hover,
+.dark_mode .icon:focus,
+.dark_mode .icon:focus-visible{
+    color: var(--clr-light-accent);
+}
+
+.dark_mode .theme_switch svg {
+    fill: var(--clr-dark-accent); 
+}
+
+.dark_mode .theme_switch:hover svg,
+.dark_mode .theme_switch:focus svg,
+.dark_mode .theme_switch:focus-visible svg {
+    fill: var(--clr-light-accent);
+}
+
+.dark_mode .cv_button {
+    color: inherit;
+    background-color: var(--clr-primary-accent);
+    border: 2px solid var(--clr-black);
+}
+
+.dark_mode .cv_button:hover {
+    color: var(--clr-white);
+    border-color: var(--clr-light-accent);
+}
+
+/*** Mobile layout **********************************************************************************/
+
+@media only screen and (max-width: 900px) {
+
+    main {
+        display: initial;
+    }
+    
+    /*** About Section *********************/
+    
+    .about_section {
+        height: auto;
+    }
+
+    .about_container {
+        flex-direction: column;
+        padding: 0 3rem;
+    }
+    
+    .stack_line {
+        margin: 2rem 0;
+    }
+    
+    .skill {
+        font-size: 0.8rem;
+    }
+    
+    .skill img {
+        width: 30px;
+        height: 30px;
+        margin: 0.1rem;
+    }
+    
+    /*** Project Section *********************/
+
+    h2 {
+        font-size: 2.5rem;
+        margin: 2rem 0;
+    }
+
+    .align_right {
+        justify-content: center;
+    }
+
+    .project_container {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        margin: 3rem;
+    }
+
+}
+
+
+/*** Footer Styling ***********************************************/
+
+/* footer {
     padding: 2rem;
-    border-top: 1px solid #FF7E29;
+    border-top: 1px solid var(--clr-primary-accent);
     font-size: 0.8rem;
-}
-
-/* if there's a hover somewhere, combine with focus pseudoclass to make it more accessible */
+} */
