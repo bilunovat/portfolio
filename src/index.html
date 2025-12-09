@@ -4,29 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Tatiana</title> <!-- TBC: consider later a better name and icon! -->
+    <meta name="author" content="Tatiana Kulagina">
+    <meta name="description" content="Tatiana Kulagina | Software Developer Portfolio - Java, Spring Boot, JavaScript, and more.">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>TatianaK</title> 
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png"/>
+    <link rel="manifest" href="../assets/favicon/site.webmanifest"/>
 </head>
-<body> <!-- class="dark_mode" -->
+<body class="dark_mode">
     <header></header>
     <main>
-        <section id="About">
-            <div class="about_section">
+        <section id="About" class="about_section">
                 <div class="icons_bar">
-                    <button class="theme_switch">
+                    <button class="icon theme_switch" type="button" aria-label="Switch between dark and light modes">
                         <svg fill="currentColor" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
                         </svg> 
                     </button>
-                    <ul>
+                    <ul class="social_links_list">
                         <li>
                             <a href="https://github.com/bilunovat" target="_blank">
-                                <svg class="icon" fill="currentColor" width="30" height="30" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
+                                <svg class="icon" aria-label="Link to a personal GitHub account" fill="currentColor" width="30" height="30" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/tkulagina/" target="_blank">
-                                <svg class="icon" fill="currentColor" width="34" height="34" viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-linkedin-circle"><path d='M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z'/><path d='M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z'/></svg>
+                                <svg class="icon" aria-label="Link to a personal LinkedIn account" fill="currentColor" width="34" height="34" viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-linkedin-circle"><path d='M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z'/><path d='M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z'/></svg>
                             </a>
                         </li>
                     </ul>
@@ -73,23 +81,22 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <section id="Projects">
             <div class="align_right">
                 <button class="cv_button" type="button">Download CV</button>
             </div>
             <h2>Personal Projects</h2>
-            <div class="project_container">
-                <div class="project_box">
+            <ul class="project_container">
+                <li class="project_box">
                     <img src="/assets/chilling_cat.JPG" alt="Photo of a chilling cat">
                     <h3>Project 1</h3>
                     <p>description of the first project 
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah</p>
-                </div>
-                <div class="project_box">
+                </li>
+                <li class="project_box">
                     <img src="/assets/coffe_cat.png" alt="Photo of a happy cat with coffee">
                     <h3>Project 2</h3>
                     <p>description of the second project
@@ -97,8 +104,8 @@
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                     </p>
-                </div>
-                <div class="project_box">
+                </li>
+                <li class="project_box">
                     <img src="/assets/jobbing_cat.JPG" alt="Photo of a working from an office cat">
                     <h3>Project 3</h3>
                     <p>description of the third project
@@ -106,8 +113,8 @@
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                     </p>
-                </div>
-                <div class="project_box">
+                </li>
+                <li class="project_box">
                     <img src="/assets/sleepy_cat.JPG" alt="Photo of a sleeping cat">
                     <h3>Project 4</h3>
                     <p>description of the fourth project
@@ -115,40 +122,40 @@
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                     </p>
-                </div>
-                <div class="project_box">
+                </li>
+                <li class="project_box">
                     <img src="/assets/chilling_cat.JPG" alt="Photo of a chilling cat">
                     <h3>Project 1</h3>
                     <p>description of the first project 
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah</p>
-                </div>
-                <div class="project_box">
+                </li>
+                <li class="project_box">
                     <img src="/assets/chilling_cat.JPG" alt="Photo of a chilling cat">
                     <h3>Project 1</h3>
                     <p>description of the first project 
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah</p>
-                </div>
-                <div class="project_box">
+                </li>
+                <li class="project_box">
                     <img src="/assets/chilling_cat.JPG" alt="Photo of a chilling cat">
                     <h3>Project 1</h3>
                     <p>description of the first project 
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah</p>
-                </div>
-                <div class="project_box">
+                </li>
+                <li class="project_box">
                     <img src="/assets/chilling_cat.JPG" alt="Photo of a chilling cat">
                     <h3>Project 1</h3>
                     <p>description of the first project 
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah
                         blah-blah-blah-blah-blah-blah</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
     </main>
 </body>
