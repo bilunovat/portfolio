@@ -8,7 +8,8 @@
     <meta name="description" content="Tatiana Kulagina | Software Developer Portfolio - Java, Spring Boot, JavaScript, and more.">
 
     <link rel="stylesheet" href="style.css">
-    
+    <script src="script.js" defer></script>
+
     <title>TatianaK</title> 
     <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg"/>
@@ -16,12 +17,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png"/>
     <link rel="manifest" href="../assets/favicon/site.webmanifest"/>
 </head>
-<body class="dark_mode">
+<body> 
     <header></header>
     <main>
         <section id="About" class="about_section">
                 <div class="icons_bar">
-                    <button class="icon theme_switch" type="button" aria-label="Switch between dark and light modes">
+                    <button class="icon theme_switch" type="button" onclick="themeSwitch()" aria-label="Switch between dark and light modes">
                         <svg fill="currentColor" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
                         </svg> 
@@ -42,7 +43,7 @@
                 <div class="about_container">
                     <img class="portfolio_photo" src="/assets/profile_photo.jpg" alt="Profile photo in anime style">
                     <h1>Tatiana Kulagina</h1>
-                    <h3>Full-Stack Developer</h3>
+                    <h3>Software Engineer</h3>
                     <p>blah-blah-blah-blah-blah-blah
                     blah-blah-blah-blah-blah-blah
                     blah-blah-blah-blah-blah-blah</p>
@@ -84,7 +85,7 @@
         </section>
         <section id="Projects">
             <div class="align_right">
-                <button class="cv_button" type="button">Download CV</button>
+                <button id="download" class="cv_button" type="button">Download CV</button>
             </div>
             <h2>Personal Projects</h2>
             <ul class="project_container">
@@ -158,4 +159,7 @@
             </ul>
         </section>
     </main>
+    <!-- <script>
+        download.addEventListener("click", () => alert("Hello there!"));
+    </script> -->
 </body>

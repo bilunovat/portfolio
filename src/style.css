@@ -202,56 +202,53 @@ h3 {
 
 /****Dark Mode layout ****************************************/
 
-@media (prefers-color-scheme: dark) {
-    .dark_mode {
-        background-color: var(--clr-black);
-        color: var(--clr-white);
-    }
-    
-    .dark_mode .about_section {
-        background-color: var(--clr-dark-bg-accent);
-        color: var(--clr-white);
-    }
-    
-    .dark_mode h1 { 
-        color: var(--clr-dark-accent);
-    }
-    
-    .dark_mode .skill {
-        background-color: var(--clr-bg-accent);
-        border: 1px solid var(--clr-light-accent);
-    }
-    
-    .dark_mode .project_box {
-        background-color: var(--clr-dark-bg-accent);
-    }
+body.dark_mode {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
 
-    .dark_mode .project_box:hover, 
-    .dark_mode .project_box:focus {
-        background-color: var(--clr-dark-accent);
-    }
-    
-    .dark_mode .icon {
-        color: var(--clr-white); 
-    }
-    
-    .dark_mode .icon:hover,
-    .dark_mode .icon:focus,
-    .dark_mode .icon:focus-visible {
-        color: var(--clr-dark-accent);
-    }
-    
-    .dark_mode .cv_button {
-        background-color: var(--clr-dark-accent);
-        color: inherit;
-        border: 2px solid var(--clr-black);
-    }
-    
-    .dark_mode .cv_button:hover {
-        color: var(--clr-white);
-        border-color: var(--clr-light-accent);
-    }
+.dark_mode .about_section {
+    background-color: var(--clr-dark-bg-accent);
+    color: var(--clr-white);
+}
 
+.dark_mode h1 { 
+    color: var(--clr-dark-accent);
+}
+
+.dark_mode .skill {
+    background-color: var(--clr-bg-accent);
+    border: 2px solid var(--clr-light-accent);
+}
+
+.dark_mode .project_box {
+    background-color: var(--clr-dark-bg-accent);
+}
+
+.dark_mode .project_box:hover, 
+.dark_mode .project_box:focus {
+    background-color: var(--clr-dark-accent);
+}
+
+.dark_mode .icon {
+    color: var(--clr-white); 
+}
+
+.dark_mode .icon:hover,
+.dark_mode .icon:focus,
+.dark_mode .icon:focus-visible {
+    color: var(--clr-dark-accent);
+}
+
+.dark_mode .cv_button {
+    background-color: var(--clr-dark-accent);
+    color: inherit;
+    border: 2px solid var(--clr-black);
+}
+
+.dark_mode .cv_button:hover {
+    color: var(--clr-white);
+    border-color: var(--clr-light-accent);
 }
 
 /****Mobile layout ****************************************/
