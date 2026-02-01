@@ -39,14 +39,8 @@ main {
 
 /*** Base Elements of Main ****/
 
-img {
-    width: 150px;
-    height: 150px;
-}
-
 h1 {
     font-size: 4rem;
-    margin: 1rem 0;
 }
 
 h2 {
@@ -81,6 +75,8 @@ h3 {
 .portfolio_photo {
     border: 5px solid var(--clr-white);
     border-radius: 2rem;
+    width: 200px;
+    height: auto;
 }
 
 .social_links_list {
@@ -88,13 +84,13 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin: 0 1.5rem;
 }
 
 .stack_line {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    margin-top: 2rem;
 }
 
 .skill {
@@ -143,16 +139,25 @@ h3 {
 
 .project_container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2, minmax(300px, 600px));
     gap: 2rem;
     list-style: none;
     margin: 5rem;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .project_box {
     border-radius: 2rem;
     background-color: var(--clr-bg-accent);
     max-width: 600px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%; 
+    overflow: hidden;
 }
 
 .project_box:hover, 
@@ -166,8 +171,11 @@ h3 {
     object-fit: cover;
     display: block;
     padding: 1rem;
-    margin-left: auto; 
-    margin-right: auto;
+    border-radius: 2rem;
+    
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
 }
 
 .project_box h3, 
@@ -253,7 +261,7 @@ body.dark_mode {
 
 /****Mobile layout ****************************************/
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     main {
         display: initial;
