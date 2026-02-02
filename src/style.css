@@ -313,7 +313,11 @@ body.dark_mode {
     
 }
 
+/****Big scale layout ****************************************/
+
 @media (max-height: 800px) {
+
+    /**** About Section ****/
 
     .portfolio_photo {
         width: auto;
@@ -331,22 +335,10 @@ body.dark_mode {
     
     .about_section p {
         font-size: 0.9rem;
-        /* line-height: 1.2; */
     }
     
     .skill img {
         width: 20px;
         height: 20px;
-        margin: 0.1rem;
     }
-
-    /* .skill p {
-        font-size: 0.8rem;
-    } 
-    
-    .skill {
-        padding: 0.5rem 1rem;
-        margin: 0.3rem;
-    }
-    */
 } 
