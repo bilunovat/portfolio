@@ -40,11 +40,11 @@ main {
 /*** Base Elements of Main ****/
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin: 0 0 4rem 0;
 }
@@ -69,7 +69,7 @@ h3 {
     justify-content: flex-start;
     flex-direction: column;
     gap: 2rem;
-    margin: 3rem;
+    margin: 2.5rem;
 }
 
 .portfolio_photo {
@@ -98,15 +98,15 @@ h3 {
     align-items: center;
     justify-content: center;
     background-color: var(--clr-bg-accent);
-    border: 2px solid var(--clr-white);
+    border: 1px solid var(--clr-white);
     border-radius: 1.5rem;
     padding: 0.5rem 1rem;
     margin: 0.3rem;
 }
 
 .skill img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin: 0.1rem;
 }
 
@@ -139,7 +139,6 @@ h3 {
 
 .project_container {
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(2, minmax(300px, 600px));
     gap: 2rem;
     list-style: none;
@@ -190,7 +189,7 @@ h3 {
 
 .cv_button {
     font-family: inherit;
-    font-size: inherit;
+    font-size: 0.8rem;
     background-color: var(--clr-white);
     color: inherit;
     border: 2px solid var(--clr-black);
@@ -261,7 +260,7 @@ body.dark_mode {
 
 /****Mobile layout ****************************************/
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
 
     main {
         display: initial;
@@ -311,4 +310,43 @@ body.dark_mode {
         margin: 3rem;
     }
 
+    
 }
+
+@media (max-height: 800px) {
+
+    .portfolio_photo {
+        width: auto;
+        height: 35vh; 
+        max-height: 200px;
+    } 
+
+    .about_section h1 {
+        font-size: clamp(1.5rem, 5vh, 2rem); 
+    }
+    
+    .about_section h3 {
+        font-size: clamp(1rem, 5vh, 1.3rem); 
+    } 
+    
+    .about_section p {
+        font-size: 0.9rem;
+        /* line-height: 1.2; */
+    }
+    
+    .skill img {
+        width: 20px;
+        height: 20px;
+        margin: 0.1rem;
+    }
+
+    /* .skill p {
+        font-size: 0.8rem;
+    } 
+    
+    .skill {
+        padding: 0.5rem 1rem;
+        margin: 0.3rem;
+    }
+    */
+} 
