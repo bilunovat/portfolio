@@ -158,15 +158,16 @@ h3 {
     border-radius: 2rem;
     background-color: var(--clr-bg-accent);
     max-width: 600px;
-    
+
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    height: 100%; 
+    height: 100%;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
-.project_box:hover, 
+.project_box:hover,
 .project_box:focus {
     background-color: var(--clr-light-accent);
     transform: scale(1.05);
@@ -178,12 +179,12 @@ h3 {
     display: block;
     padding: 1rem;
     border-radius: 2rem;
-    
+
     width: 100%;
-    height: var(--project-img-height); 
+    height: var(--project-img-height);
 }
 
-.project_box h3, 
+.project_box h3,
 .project_box p {
     margin: 1.5rem;
 }
@@ -205,13 +206,13 @@ h3 {
     margin: 1.5rem;
 }
 
-.cv_button:hover, 
-.cv_button:focus, 
+.cv_button:hover,
+.cv_button:focus,
 .cv_button:focus-visible {
     background-color: var(--clr-primary-accent);
     color: var(--clr-white);
     border-color: var(--clr-light-accent);
-} 
+}
 
 /****Dark Mode layout ****************************************/
 
@@ -225,7 +226,7 @@ body.dark_mode {
     color: var(--clr-white);
 }
 
-.dark_mode h1 { 
+.dark_mode h1 {
     color: var(--clr-dark-accent);
 }
 
@@ -238,13 +239,13 @@ body.dark_mode {
     background-color: var(--clr-dark-bg-accent);
 }
 
-.dark_mode .project_box:hover, 
+.dark_mode .project_box:hover,
 .dark_mode .project_box:focus {
     background-color: var(--clr-dark-accent);
 }
 
 .dark_mode .icon {
-    color: var(--clr-white); 
+    color: var(--clr-white);
 }
 
 .dark_mode .icon:hover,
@@ -271,9 +272,8 @@ body.dark_mode {
     main {
         display: initial;
     }
-    
+
     /**** About Section ****/
-    
     .about_section {
         height: auto;
         position: relative;
@@ -284,21 +284,21 @@ body.dark_mode {
         justify-content: flex-start;
         padding: 0 3rem;
     }
-    
+
     .stack_line {
         margin: 2rem 0;
     }
-    
+
     .skill {
         font-size: 0.8rem;
     }
-    
+
     .skill img {
         width: 30px;
         height: 30px;
         margin: 0.1rem;
     }
-    
+
     /**** Project Section ****/
 
     h2 {
@@ -315,8 +315,6 @@ body.dark_mode {
         flex-direction: column;
         margin: 3rem;
     }
-
-    
 }
 
 /****Big scale layout ****************************************/
@@ -327,24 +325,24 @@ body.dark_mode {
 
     .portfolio_photo {
         width: auto;
-        height: 35vh; 
+        height: 35vh;
         max-height: 200px;
-    } 
+    }
 
     .about_section h1 {
-        font-size: clamp(1.5rem, 5vh, 2rem); 
+        font-size: clamp(1.5rem, 5vh, 2rem);
     }
-    
+
     .about_section h3 {
-        font-size: clamp(1rem, 5vh, 1.3rem); 
-    } 
-    
+        font-size: clamp(1rem, 5vh, 1.3rem);
+    }
+
     .about_section p {
         font-size: 0.9rem;
     }
-    
+
     .skill img {
         width: 20px;
         height: 20px;
     }
-} 
+}
