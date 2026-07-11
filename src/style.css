@@ -8,9 +8,17 @@
     --clr-light-accent: #FFD2B4;
     --clr-dark-accent: #d36720;
     --clr-bg-accent: hsla(24, 100%, 85%, 0.286);
-    --clr-dark-bg-accent: hsla(24, 74%, 15%, 0.351);
     --clr-black: #000;
     --clr-white: #f5f5f5;
+
+    /* Dark mode surfaces (layered for readable contrast) */
+    --clr-dark-bg: #16120e;
+    --clr-dark-surface: #262019;
+    --clr-dark-border: rgba(255, 210, 180, 0.12);
+    --clr-dark-chip-bg: rgba(255, 126, 41, 0.1);
+    --clr-dark-chip-border: rgba(255, 126, 41, 0.4);
+
+    --clr-shadow: rgba(0, 0, 0, 0.07);
 
     --project-img-height: 250px;
     --about-section-height: 100vh;
@@ -176,7 +184,7 @@ h3 {
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 8px var(--clr-shadow);
 }
 
 .project_box:hover,
@@ -228,31 +236,34 @@ h3 {
 /****Dark Mode layout ****************************************/
 
 body.dark_mode {
-    background-color: var(--clr-black);
+    background-color: var(--clr-dark-bg);
     color: var(--clr-white);
 }
 
 .dark_mode .about_section {
-    background-color: var(--clr-dark-bg-accent);
+    background-color: var(--clr-dark-surface);
     color: var(--clr-white);
+    border-right: 1px solid var(--clr-dark-border);
 }
 
 .dark_mode h1 {
-    color: var(--clr-dark-accent);
+    color: var(--clr-primary-accent);
 }
 
 .dark_mode .skill {
-    background-color: var(--clr-bg-accent);
-    border: 2px solid var(--clr-light-accent);
+    background-color: var(--clr-dark-chip-bg);
+    border: 1px solid var(--clr-dark-chip-border);
 }
 
 .dark_mode .project_box {
-    background-color: var(--clr-dark-bg-accent);
+    background-color: var(--clr-dark-surface);
+    border: 1px solid var(--clr-dark-border);
 }
 
 .dark_mode .project_box:hover,
 .dark_mode .project_box:focus {
     background-color: var(--clr-dark-accent);
+    border-color: var(--clr-dark-accent);
 }
 
 .dark_mode .icon {
@@ -266,8 +277,16 @@ body.dark_mode {
 }
 
 .dark_mode .cv_button {
-    background-color: var(--clr-dark-accent);
+    background-color: var(--clr-dark-surface);
     color: var(--clr-white);
+    border-color: var(--clr-dark-border);
+}
+
+.dark_mode .cv_button:hover,
+.dark_mode .cv_button:focus,
+.dark_mode .cv_button:focus-visible {
+    background-color: var(--clr-primary-accent);
+    border-color: var(--clr-primary-accent);
 }
 
 /****Mobile layout ****************************************/
