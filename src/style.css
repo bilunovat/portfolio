@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap');
 
 /**** Page layout ****************************************/
 
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    font-family: Montserrat, Roboto, serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-align: left;
     background-color: var(--clr-white);
     color: var(--clr-black);
@@ -41,6 +41,14 @@ main {
 }
 
 /*** Base Elements of Main ****/
+
+h1,
+h2,
+.about_section h3,
+.project_box h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
 
 h1 {
     font-size: 2.5rem;
@@ -77,6 +85,10 @@ h3 {
     gap: 2rem;
     margin: 2.5rem;
     flex: 1;
+}
+
+.about_section h3 {
+    margin-bottom: 0.5rem;
 }
 
 .portfolio_photo {
@@ -197,9 +209,9 @@ h3 {
 .cv_button {
     font-family: inherit;
     font-size: 0.8rem;
-    background-color: var(--clr-white);
-    color: inherit;
-    border: 2px solid var(--clr-black);
+    background-color: var(--clr-primary-accent);
+    color: var(--clr-white);
+    border: 2px solid var(--clr-light-accent);
     border-radius: 2rem;
     cursor: pointer;
     padding: 1rem;
@@ -209,9 +221,8 @@ h3 {
 .cv_button:hover,
 .cv_button:focus,
 .cv_button:focus-visible {
-    background-color: var(--clr-primary-accent);
-    color: var(--clr-white);
-    border-color: var(--clr-light-accent);
+    transform: scale(1.05);
+    transition: transform 0.3s;
 }
 
 /****Dark Mode layout ****************************************/
@@ -256,13 +267,7 @@ body.dark_mode {
 
 .dark_mode .cv_button {
     background-color: var(--clr-dark-accent);
-    color: inherit;
-    border: 2px solid var(--clr-black);
-}
-
-.dark_mode .cv_button:hover {
     color: var(--clr-white);
-    border-color: var(--clr-light-accent);
 }
 
 /****Mobile layout ****************************************/
